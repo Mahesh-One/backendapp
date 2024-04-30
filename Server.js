@@ -2,16 +2,24 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 
+//MongoDB connection
 
-const dburl = "mongodb://localhost:27017/sdpproject1"
+// const dburl = "mongodb://localhost:27017/sdpproject1"
+// mongoose.connect(dburl).then(() => {
+//     console.log("Connected to DB Successfully")
+// }).catch((err) => {
+//     console.log(err.message)
+// });
+
+
+//MongoDB Atlas Connection
+
+const dburl = "mongodb+srv://mahesh:mahesh@sdpcluster.xyyt1lc.mongodb.net/sdpproject1?retryWrites=true&w=majority&appName=SDPCluster"
 mongoose.connect(dburl).then(() => {
-    console.log("Connected to DB Successfully")
+    console.log("Connected to MongoDB Atlas Successfully")
 }).catch((err) => {
     console.log(err.message)
 });
-
-
-
 
 
 const app = express() 
